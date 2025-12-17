@@ -84,8 +84,8 @@ export function Hero() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
                         className={`absolute inset-0 ${currentItem.id === "crt-511-v2"
-                                ? "right-[-5%] md:right-0" // Just slightly pulled in compared to others
-                                : "right-[-10%] md:right-[-20%] lg:right-[-10%]" // Standard offset
+                            ? "right-[-5%] md:right-0" // Just slightly pulled in compared to others
+                            : "right-[-10%] md:right-[-20%] lg:right-[-10%]" // Standard offset
                             }`}
                     >
                         <img
@@ -161,6 +161,9 @@ export function Hero() {
                     </motion.div>
                 </div>
             </div>
+
+            {/* Bottom Gradient for smooth transition */}
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#9e1c1c] to-transparent pointer-events-none" />
         </section>
     );
 }
